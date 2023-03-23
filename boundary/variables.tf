@@ -14,9 +14,6 @@ variable "boundary_cluster_password" {
 }
 
 variable "tfc_organization" {}
-variable "app_domain" {}
-variable "auth0_user_id_dio" {}
-variable "auth0_user_id_valentine" {}
-variable "auth0_user_id_jony" {}
-variable "auth0_user_id_gyro" {}
-variable "auth0_user_id_blackmore" {}
+
+variable "login_name" {}
+variable "password" {}
