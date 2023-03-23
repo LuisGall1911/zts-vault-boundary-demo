@@ -1,34 +1,3 @@
-# Read-Only for HVN in HCP
-output "created_at" {
-  description = "The time that the HVN was created."
-  value       = hcp_hvn.zts.created_at
-}
-
-output "id" {
-  description = "The ID of this resource."
-  value       = hcp_hvn.zts.id
-}
-
-output "organization_id" {
-  description = "The ID of the HCP organization where the HVN is located."
-  value       = hcp_hvn.zts.organization_id
-}
-
-output "project_id" {
-  description = "The ID of the HCP project where the HVN is located."
-  value       = hcp_hvn.zts.project_id
-}
-
-output "provider_account_id" {
-  description = "The provider account ID where the HVN is located."
-  value       = hcp_hvn.zts.provider_account_id
-}
-
-output "self_link_hvn" {
-  description = "A unique URL identifying the HVN."
-  value       = hcp_hvn.zts.self_link
-}
-
 # Read-Only for HCP Vault Cluster
 output "cloud_provider" {
   description = "The provider where the HCP Vault cluster is located."
