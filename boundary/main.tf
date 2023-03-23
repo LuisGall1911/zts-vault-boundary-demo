@@ -41,9 +41,3 @@ provider "boundary" {
   password_auth_method_login_name = var.boundary_cluster_username # changeme
   password_auth_method_password   = var.boundary_cluster_password # changeme
 }
-
-provider "auth0" {}
-
-data "auth0_client" "hcp_boundary" {
-  name = "HCP Boundary" # changeme
-}
