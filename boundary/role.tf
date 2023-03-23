@@ -1,10 +1,7 @@
-# Organization scope: JOJO 7th demo organization
 resource "boundary_role" "admin" {
-  name        = "steel-ball-run-project-admin"
-  description = "admin role"
-  principal_ids = [
-    boundary_managed_group.boss.id
-  ]
+  name          = "steel-ball-run-project-admin"
+  description   = "admin role"
+  principal_ids = [boundary_user.luis.id]
   grant_strings = ["id=*;type=*;actions=*"]
   scope_id      = boundary_scope.project1.id
 }
@@ -12,8 +9,7 @@ resource "boundary_role" "admin" {
 resource "boundary_role" "linux" {
   name        = "steel-ball-run-project-linux-admin"
   description = "linux admin role"
-  principal_ids = [
-    boundary_managed_group.boss.id
+  principal_ids = [boundary_user.luis.id]
   ]
   grant_strings = [
     "id=${boundary_target.linux.id};actions=*",
@@ -23,6 +19,7 @@ resource "boundary_role" "linux" {
     "id=*;type=host-set;actions=list,read",
     "id=*;type=host;actions=list,read"
   ]
+  
   scope_id = boundary_scope.project1.id
   depends_on = [
     boundary_host_catalog_static.linux,
