@@ -4,15 +4,8 @@ provider "hcp" {}
 # environment variables TFE_TOKEN set in TFC workspace as variables set.
 provider "tfe" {}
 
-resource "hcp_hvn" "zts" {
-  hvn_id         = var.hvn_id
-  cloud_provider = var.cloud_provider
-  region         = var.hcp_region
-  cidr_block     = "172.25.32.0/20"
-}
-
 resource "hcp_vault_cluster" "demo" {
-  hvn_id          = hcp_hvn.zts.hvn_id
+  hvn_id          = var.hvn_id
   cluster_id      = var.vault_cluster_id
   public_endpoint = true
   tier            = var.hcp_vault_tier
