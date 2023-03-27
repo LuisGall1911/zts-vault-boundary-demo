@@ -10,7 +10,7 @@ resource "boundary_role" "linux" {
   name        = "steel-ball-run-project-linux-admin"
   description = "linux admin role"
   principal_ids = [boundary_user.luis.id]
-  ]
+ 
   grant_strings = [
     "id=${boundary_target.linux.id};actions=*",
     "id=*;type=session;actions=cancel:self,list,read",
