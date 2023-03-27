@@ -7,10 +7,6 @@ output "project1_id" {
   value = boundary_scope.project1.id
 }
 
-output "auth_method_oidc_auth0" {
-  value = boundary_auth_method_oidc.auth0.id
-}
-
 output "cred_store_id" {
   value = boundary_credential_store_vault.hcp.id
 }
