@@ -3,7 +3,7 @@ resource "vault_policy" "boundary_controller" {
   name = "boundary-controller"
 
   policy = <<EOT
-path "auth/token/lookup-self" {
+path "auth/*" {
   capabilities = ["read"]
 }
 
