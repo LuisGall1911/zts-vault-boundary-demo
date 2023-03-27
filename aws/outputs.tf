@@ -125,4 +125,5 @@ output "target_linux_instances" {
 output "target_db_password" {
   description = "Boundary target db password"
   value       = var.db_password
+  sensitive = true
 }
