@@ -9,5 +9,5 @@ resource "boundary_user" "luis" {
   name        = "jeff"
   description = "Luis's user resource"
   account_ids = [boundary_account_password.luis.id]
-  scope_id    = boundary_scope.org.id
+  scope_id    = boundary_scope.project1.id
 }
