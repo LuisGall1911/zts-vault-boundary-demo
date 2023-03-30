@@ -1,7 +1,7 @@
-variable "auth_method_id" {
-  description = "Boundary provider auth_method_id"
-  default     = "ampw_1234567890"
-}
+#variable "auth_method_id" {
+ # description = "Boundary provider auth_method_id"
+  #default     = "ampw_1234567890"
+#}
 
 variable "boundary_cluster_username" {
   description = "Boundary provider login name"
