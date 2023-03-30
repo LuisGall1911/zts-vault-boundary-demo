@@ -6,7 +6,7 @@ resource "boundary_account_password" "luis" {
 }
 
 resource "boundary_user" "luis" {
-  name        = "jeff"
+  name        = "luis"
   description = "Luis's user resource"
   account_ids = [boundary_account_password.luis.id]
   scope_id    = boundary_scope.project1.id
